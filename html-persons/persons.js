@@ -155,4 +155,7 @@ class PersonModifierCSS {
         ];
     }
 }
+
 const personModifier = new PersonModifierCSS();
+customElements.define('m-person', MPerson);
+customElements.define('f-person', FPerson);
