@@ -132,8 +132,8 @@ class PersonModifierCSS {
 
     rotate(angle) {
         return [
-            [Math.cos(angle), -Math.sin(angle), 0, 0],
-            [Math.sin(angle), Math.cos(angle), 0, 0],
+            [Math.cos(angle), Math.sin(angle), 0, 0],
+            [-Math.sin(angle), Math.cos(angle), 0, 0],
             [0, 0, 1, 0],
             [0, 0, 0, 1]
         ];
@@ -161,6 +161,7 @@ class PersonModifierCSS {
 const personModifier = new PersonModifierCSS();
 customElements.define('m-person', MPerson);
 customElements.define('f-person', FPerson);
+
 
 
 
