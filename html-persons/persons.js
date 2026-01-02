@@ -39,7 +39,7 @@ class MPerson extends HTMLElement {
     <div>
         <img src="./m(sep).png" class="body-partm-bottom-right-arm" style="clip-path: rect(191px 122px 347px 67px); transform: translate(-67px, -191px) translate(7px, 197px);">
     </div>
-</div>`.replace('./m(sep).png', 'https://onu032001.github.io/html-persons/html-persons/m(sep).png');
+</div>`.replaceAll('./m(sep).png', 'https://onu032001.github.io/html-persons/html-persons/m(sep).png');
     }
 }
 class FPerson extends HTMLElement {
@@ -161,6 +161,7 @@ class PersonModifierCSS {
 const personModifier = new PersonModifierCSS();
 customElements.define('m-person', MPerson);
 customElements.define('f-person', FPerson);
+
 
 
 
