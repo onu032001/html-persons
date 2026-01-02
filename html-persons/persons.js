@@ -4,40 +4,40 @@ class MPerson extends HTMLElement {
         if (this.innerHTML.trim() == '')
             this.innerHTML = `<div class="m-person" style="display: inline-block; position: relative; width: 180px; height: 542px;">
     <div>
-        <img src="./m(sep).png" class="body-part m-top-torso" style="clip-path: rect(116px 317px 277px 185px); transform: translate(-185px, -116px) translate(23px, 57px);">
+        <img src="./m(sep).png" class="m-top-torso" style="position: absolute; clip-path: rect(116px 317px 277px 185px); transform: translate(-185px, -116px) translate(23px, 57px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-bottom-torso" style="clip-path: rect(292px 302px 408px 202px); transform: translate(-202px, -292px) translate(40px, 202px);">
+        <img src="./m(sep).png" class="m-bottom-torso" style="position: absolute; clip-path: rect(292px 302px 408px 202px); transform: translate(-202px, -292px) translate(40px, 202px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-face" style="clip-path: rect(0px 292px 97px 212px); transform: translate(-212px, 0px) translate(50px, 0px);">
+        <img src="./m(sep).png" class="m-face" style="position: absolute; clip-path: rect(0px 292px 97px 212px); transform: translate(-212px, 0px) translate(50px, 0px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-top-left-leg" style="clip-path: rect(257px 362px 387px 312px); transform: translate(-312px, -257px) translate(87px, 307px);">
+        <img src="./m(sep).png" class="m-top-left-leg" style="position: absolute; clip-path: rect(257px 362px 387px 312px); transform: translate(-312px, -257px) translate(87px, 307px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-bottom-left-leg" style="clip-path: rect(397px 387px 542px 312px); transform: translate(-312px, -397px) translate(87px, 390px);">
+        <img src="./m(sep).png" class="m-bottom-left-leg" style="position: absolute; clip-path: rect(397px 387px 542px 312px); transform: translate(-312px, -397px) translate(87px, 390px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-top-right-leg" style="clip-path: rect(257px 187px 387px 137px); transform: translate(-137px, -257px) translate(38px, 306px);">
+        <img src="./m(sep).png" class="m-top-right-leg" style="position: absolute; clip-path: rect(257px 187px 387px 137px); transform: translate(-137px, -257px) translate(38px, 306px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-bottom-right-leg" style="clip-path: rect(397px 187px 542px 116px); transform: translate(-116px, -397px) translate(17px, 389px);">
+        <img src="./m(sep).png" class="m-bottom-right-leg" style="position: absolute; clip-path: rect(397px 187px 542px 116px); transform: translate(-116px, -397px) translate(17px, 389px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-pelvis" style="clip-path: rect(427px 297px 473px 198px); transform: translate(-198px, -427px) translate(38px, 307px);">
+        <img src="./m(sep).png" class="m-pelvis" style="position: absolute; clip-path: rect(427px 297px 473px 198px); transform: translate(-198px, -427px) translate(38px, 307px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-top-left-arm" style="clip-path: rect(52px 417px 182px 377px); transform: translate(-377px, -52px) translate(114px, 106px);">
+        <img src="./m(sep).png" class="m-top-left-arm" style="position: absolute; clip-path: rect(52px 417px 182px 377px); transform: translate(-377px, -52px) translate(114px, 106px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-bottom-left-arm" style="clip-path: rect(191px 432px 346px 377px); transform: translate(-377px, -191px) translate(114px, 197px);">
+        <img src="./m(sep).png" class="m-bottom-left-arm" style="position: absolute; clip-path: rect(191px 432px 346px 377px); transform: translate(-377px, -191px) translate(114px, 197px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-part m-top-right-arm" style="clip-path: rect(52px 121px 182px 81px); transform: translate(-81px, -52px) translate(20px, 104px);">
+        <img src="./m(sep).png" class="m-top-right-arm" style="position: absolute; clip-path: rect(52px 121px 182px 81px); transform: translate(-81px, -52px) translate(20px, 104px);">
     </div>
     <div>
-        <img src="./m(sep).png" class="body-partm-bottom-right-arm" style="clip-path: rect(191px 122px 347px 67px); transform: translate(-67px, -191px) translate(7px, 197px);">
+        <img src="./m(sep).png" class="m-bottom-right-arm" style="position: absolute; clip-path: rect(191px 122px 347px 67px); transform: translate(-67px, -191px) translate(7px, 197px);">
     </div>
 </div>`.replaceAll('./m(sep).png', 'https://onu032001.github.io/html-persons/html-persons/m(sep).png');
     }
@@ -48,43 +48,43 @@ class FPerson extends HTMLElement {
         if (this.innerHTML.trim() == '')
             this.innerHTML = `<div class="f-person" style="display: inline-block; position: relative; width: 180px; height: 542px;">
     <div>
-        <img src="./f(sep).png" class="body-part f-top-torso" style="clip-path: rect(116px 317px 277px 185px); transform: translate(-185px, -116px) translate(23px, 57px);">
+        <img src="./f(sep).png" class="f-top-torso" style="position: absolute; clip-path: rect(116px 317px 277px 185px); transform: translate(-185px, -116px) translate(23px, 57px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-bottom-torso" style="clip-path: rect(292px 302px 408px 202px); transform: translate(-202px, -292px) translate(40px, 202px);">
+        <img src="./f(sep).png" class="f-bottom-torso" style="position: absolute; clip-path: rect(292px 302px 408px 202px); transform: translate(-202px, -292px) translate(40px, 202px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-face" style="clip-path: rect(0px 292px 97px 212px); transform: translate(-212px, 0px) translate(50px, 0px);">
+        <img src="./f(sep).png" class="f-face" style="position: absolute; clip-path: rect(0px 292px 97px 212px); transform: translate(-212px, 0px) translate(50px, 0px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-top-left-leg" style="clip-path: rect(257px 362px 387px 312px); transform: translate(-312px, -257px) translate(87px, 307px);">
+        <img src="./f(sep).png" class="f-top-left-leg" style="position: absolute; clip-path: rect(257px 362px 387px 312px); transform: translate(-312px, -257px) translate(87px, 307px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-bottom-left-leg" style="clip-path: rect(397px 387px 542px 312px); transform: translate(-312px, -397px) translate(87px, 390px);">
+        <img src="./f(sep).png" class="f-bottom-left-leg" style="position: absolute; clip-path: rect(397px 387px 542px 312px); transform: translate(-312px, -397px) translate(87px, 390px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-top-right-leg" style="clip-path: rect(257px 187px 387px 137px); transform: translate(-137px, -257px) translate(38px, 306px);">
+        <img src="./f(sep).png" class="f-top-right-leg" style="position: absolute; clip-path: rect(257px 187px 387px 137px); transform: translate(-137px, -257px) translate(38px, 306px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-bottom-right-leg" style="clip-path: rect(397px 187px 542px 116px); transform: translate(-116px, -397px) translate(17px, 389px);">
+        <img src="./f(sep).png" class="f-bottom-right-leg" style="position: absolute; clip-path: rect(397px 187px 542px 116px); transform: translate(-116px, -397px) translate(17px, 389px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-pelvis" style="clip-path: rect(427px 297px 473px 198px); transform: translate(-198px, -427px) translate(38px, 307px);">
+        <img src="./f(sep).png" class="f-pelvis" style="position: absolute; clip-path: rect(427px 297px 473px 198px); transform: translate(-198px, -427px) translate(38px, 307px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-skirt" style="clip-path: rect(7px 167px 123px 22px); transform: translate(-22px, -7px) translate(20px, 306px);">
+        <img src="./f(sep).png" class="f-skirt" style="position: absolute; clip-path: rect(7px 167px 123px 22px); transform: translate(-22px, -7px) translate(20px, 306px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-top-left-arm" style="clip-path: rect(52px 417px 182px 377px); transform: translate(-377px, -52px) translate(114px, 106px);">
+        <img src="./f(sep).png" class="f-top-left-arm" style="position: absolute; clip-path: rect(52px 417px 182px 377px); transform: translate(-377px, -52px) translate(114px, 106px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-bottom-left-arm" style="clip-path: rect(191px 432px 346px 377px); transform: translate(-377px, -191px) translate(114px, 197px);">
+        <img src="./f(sep).png" class="f-bottom-left-arm" style="position: absolute; clip-path: rect(191px 432px 346px 377px); transform: translate(-377px, -191px) translate(114px, 197px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-top-right-arm" style="clip-path: rect(123px 182px 252px 142px); transform: translate(-142px, -123px) translate(20px, 104px);">
+        <img src="./f(sep).png" class="f-top-right-arm" style="position: absolute; clip-path: rect(123px 182px 252px 142px); transform: translate(-142px, -123px) translate(20px, 104px);">
     </div>
     <div>
-        <img src="./f(sep).png" class="body-part f-bottom-right-arm" style="clip-path: rect(191px 122px 347px 67px); transform: translate(-67px, -191px) translate(7px, 197px);">
+        <img src="./f(sep).png" class="f-bottom-right-arm" style="position: absolute; clip-path: rect(191px 122px 347px 67px); transform: translate(-67px, -191px) translate(7px, 197px);">
     </div>
 </div>`.replaceAll('./f(sep).png', 'https://onu032001.github.io/html-persons/html-persons/f(sep).png');
     }
