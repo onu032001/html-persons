@@ -1,5 +1,6 @@
 class MPerson extends HTMLElement {
     constructor() {
+        super();
         if (this.innerHTML.trim() == '')
             this.innerHTML = `<div class="m-person" style="display: inline-block; position: relative; width: 180px; height: 542px;">
     <div>
@@ -43,6 +44,7 @@ class MPerson extends HTMLElement {
 }
 class FPerson extends HTMLElement {
     constructor() {
+        super();
         if (this.innerHTML.trim() == '')
             this.innerHTML = `<div class="f-person" style="display: inline-block; position: relative; width: 180px; height: 542px;">
     <div>
@@ -159,4 +161,5 @@ class PersonModifierCSS {
 const personModifier = new PersonModifierCSS();
 customElements.define('m-person', MPerson);
 customElements.define('f-person', FPerson);
+
 
