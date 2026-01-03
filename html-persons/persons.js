@@ -89,6 +89,14 @@ class FPerson extends HTMLElement {
 </div>`.replaceAll('./f(sep).png', 'https://onu032001.github.io/html-persons/html-persons/f(sep).png');
     }
 }
+
+class Vector {
+    constructor(xPos, yPos) {
+        this.xPos = xPos;
+        this.yPos = yPos;
+    }
+}
+
 class PersonModifierCSS {
     constructor() {
         this.iden = [
@@ -98,6 +106,13 @@ class PersonModifierCSS {
             [0,0,0,1]
         ];
     }
+    
+    /**
+     * Multiplies matrices.
+     * @param {Array<Array<number>>} mat1 First matrix to multiply.
+     * @param {Array<Array<number>>} mat2 Second matrix to multiply.
+     * @returns {Array<Array<number>>} Matrix multiplication result.
+     */
     multiplyMatrix(mat1, mat2) {
         const rows1 = mat1.length;
         const cols1 = mat1[0].length;
@@ -126,10 +141,20 @@ class PersonModifierCSS {
         return result;
     }
 
+    /**
+     * Converts matrix to CSS String.
+     * @param {Array<Array<number>>} mat Matrix to convert to CSS String.
+     * @returns {string} CSS String result.
+     */
     replaceMatrix(mat) {
         return `matrix3d(${String(mat)})`;
     }
 
+    /**
+     * Rotates the point.
+     * @param {number} angle Amount to rotate the point.
+     * @returns {Array<Array<Number>>} Point rotation result.
+     */
     rotate(angle) {
         return [
             [Math.cos(angle), -Math.sin(angle), 0, 0],
@@ -139,7 +164,14 @@ class PersonModifierCSS {
         ];
     }
 
-    translate(x, y) {
+    /**
+     * Translates the point.
+     * @param {Vector} vector Amount to translate the point.
+     * @returns {Array<Array<Number>>} Point translation result.
+     */
+    translate(vector) {
+        const x = vector.xPos;
+        const y = vector.yPos;
         return [
             [1, 0, 0, 0],
             [0, 1, 0, 0],
@@ -148,7 +180,14 @@ class PersonModifierCSS {
         ];
     }
 
-    scale(x, y) {
+    /**
+     * Scales the point.
+     * @param {scaleVector} vector Amount to scale the point.
+     * @returns {Array<Array<Number>>} Point scalation(?) result.
+     */
+    scale(scaleVector) {
+        const x = scaleVector.xPos;
+        const y = scaleVector.yPos;
         return [
             [x, 0, 0, 0],
             [0, y, 0, 0],
@@ -156,15 +195,26 @@ class PersonModifierCSS {
             [0, 0, 0, 1]
         ];
     }
+
+    /**
+     * Returns the translation matrix of rotated point matrix.
+     * @param {Vector} point Point to rotate through the center.
+     * @param {Vector} centerPoint Rotation center.
+     * @param {number} angle Rotation angle.
+     * @returns {Array<Array<number>>} Result of translation matrix of rotated point matrix.
+     */
+    rotateTranslate(point, centerPoint, angle) {
+        let transformResult = PersonModifierCSS.prototype.translate(new Vector(centerPoint.xPos - point.xPos, centerPoint.yPos - point.yPos));
+        transformResult = PersonModifierCSS.prototype.multiplyMatrix(
+            transformResult, PersonModifierCSS.prototype.rotate(angle)
+        );
+        transformResult = PersonModifierCSS.prototype.multiplyMatrix(
+            transformResult, PersonModifierCSS.prototype.translate(new Vector(point.xPos - centerPoint.xPos, point.yPos - centerPoint.yPos))
+        );
+        return transformResult;
+    }
 }
 
 const personModifier = new PersonModifierCSS();
 customElements.define('m-person', MPerson);
 customElements.define('f-person', FPerson);
-
-
-
-
-
-
-
